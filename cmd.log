@@ -1,0 +1,4 @@
+npm init
+touch .bowerrc
+bower init
+doskey /history >>cmd.log

@@ -1,0 +1,32 @@
+{
+  "name": "myshop",
+  "version": "1.0.0",
+  "description": "myshop node bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhuhuijun/myshop"
+  },
+  "keywords": [
+    "myshop"
+  ],
+  "author": "zhuhj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhuhuijun/myshop/issues"
+  },
+  "homepage": "https://github.com/zhuhuijun/myshop",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "cookie-parser": "^1.4.0",
+    "debug": "^2.2.0",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "mongoose": "^4.2.3",
+    "morgan": "^1.6.1",
+    "serve-favicon": "^2.3.0"
+  }
+}
