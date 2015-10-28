@@ -56,7 +56,4 @@ router.post('/validate', function (req, res, next) {
     }
 
 });
-router.get('/test', function (req, res, next) {
-    console.log('test');
-});
 module.exports = router;

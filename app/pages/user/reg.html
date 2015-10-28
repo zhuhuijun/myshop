@@ -2,7 +2,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">注册</div>
 
-        <form action="" novalidate role="form" name="userform" class="form-horizontal" method="post">
+        <form action="" novalidate role="form" name="userform" class="form-horizontal">
             <div class="panel-body">
 
                 <div class="form-group row "
@@ -70,7 +70,7 @@
                     <div class="input-group col-sm-4 col-xs-4">
                         <div type="text" class="input-group-addon"><span class="glyphicon  glyphicon-lock "></span>
                         </div>
-                        <input type="text" data-ng-model="user.userpwd2" class="form-control" name="userpwd2"
+                        <input type="password" data-ng-model="user.userpwd2" class="form-control" name="userpwd2"
                                id="userpwd2" placeholder="输入6~12位的密码" ng-required ng-required data-ng-minlength="6"
                                data-ng-maxlength="12">
                     </div>
@@ -86,9 +86,9 @@
 
             <div class="panel-footer clearfix">
                 <div class="col-sm-offset-5 col-sm-1 col-xs-offset-5  col-xs-1">
-                    <button type="submit" class="btn btn-lg btn-primary btn-enter"
+                    <button type="button" class="btn btn-lg btn-primary btn-enter"
                             data-ng-click="save()"
-                            data-ng-disabled="userform.$invalid||user.userpwd!=user.userpwd2">
+                            data-ng-disabled="userform.$invalid||user.userpwd!=user.userpwd2||user.userpwd2!=''">
                         注册
                     </button>
                 </div>
