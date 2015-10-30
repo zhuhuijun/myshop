@@ -51,6 +51,15 @@ app.service('WareService', function ($http, $q) {
                     deferred.reject(msgdd);
                 });
             return deferred.promise;
+        },
+        DeleteCart:function(scope,options){
+            var deferred = $q.defer();
+            $http(options).success(function (warenew) {
+                deferred.resolve(warenew);
+            }).error(function (msgdd) {
+                    deferred.reject(msgdd);
+                });
+            return deferred.promise;
         }
     }
 });
