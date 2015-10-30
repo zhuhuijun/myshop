@@ -12,6 +12,8 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1:28017/myshop');
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var wares = require('./routes/wares');
+var carts = require('./routes/carts');
 var app = express();
 
 // view engine setup
@@ -44,6 +46,8 @@ app.use(flash());
 /**路由*/
 app.use('/', routes);
 app.use('/users', users);
+app.use('/wares', wares);
+app.use('/carts', carts);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
     var err = new Error('Not Found');

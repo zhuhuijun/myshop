@@ -14,15 +14,19 @@
         <a href="#/" class="navbar-brand">我的商城</a>
     </div>
     <ul class="nav navbar-nav">
-        <li><a href="#/home">首页</a></li>
-        <li><a href="#/users/reg">注册</a></li>
-        <li><a href="#/users/login">登录</a></li>
+        <li><a href="#/home" data-ng-show="me" data-ng-class="{active:isActive('/home')}">首页</a></li>
+        <li><a href="#/users/reg" data-ng-hide="me" data-ng-class="{active:isActive('/users/reg')}">注册</a></li>
+        <li><a href="#/users/login" data-ng-hide="me" data-ng-class="{active:isActive('/users/login')}">登录</a></li>
+        <li><a href="#/wares/list" data-ng-show="me" data-ng-class="{active:isActive('/wares/list')}">浏览商品</a></li>
+        <li><a href="#/wares/admin/list" data-ng-show="me" data-ng-class="{active:isActive('/wares/admin/list')}">商品管理</a>
+        </li>
+        <li><a href="#/carts/list" data-ng-show="me" data-ng-class="{active:isActive('/carts/list')}">购物车</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
             <a href="#" class="dropdown-toogle" data-toggle="dropdown" role="button">张三</a>
             <ul class="dropdown-menu dropdown-menu-left">
-                <li><a href="#/users/logout">退出</a></li>
+                <li><a href="#/users/logout" data-ng-click="logout()">退出</a></li>
             </ul>
         </li>
     </ul>
@@ -35,4 +39,5 @@
 <script src="public/lib/angular-route/angular-route.js" type="text/javascript"></script>
 <script src="public/javascripts/app.js" type="text/javascript"></script>
 <script src="public/javascripts/controller.js" type="text/javascript"></script>
+<script src="public/javascripts/service.js" type="text/javascript"></script>
 </html>

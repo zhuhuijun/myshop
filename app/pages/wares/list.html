@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1> 选择商品</h1>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-3 thumbnail" data-ng-repeat="ware in wares track by $index">
+                            <img style="width: 200px;height: 200px;" ng-src="{{ware.imgurl}}" alt="{{ware.name}}"/>
+
+                            <div class="caption">
+                                <h3 data-ng-bind="ware.name"></h3>
+
+                                <p data-ng-bind="ware.price"></p>
+
+                                <p>
+                                    <a href="javascript:void(0);" class="btn btn-success" data-ng-click="addCart(ware._id)">购买</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
